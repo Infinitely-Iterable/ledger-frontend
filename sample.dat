@@ -1,0 +1,18 @@
+; Sample Ledger file for testing
+; Accounts are defined implicitly when used
+
+2024-01-01 Opening Balance
+    Assets:Checking         $1000.00
+    Equity:Opening-Balance  $-1000.00
+
+2024-01-02 Grocery Store
+    Expenses:Food           $45.67
+    Assets:Checking         $-45.67
+
+2024-01-03 Salary
+    Assets:Checking         $3000.00
+    Income:Salary           $-3000.00
+
+2024-01-05 Rent Payment
+    Expenses:Housing:Rent   $1200.00
+    Assets:Checking         $-1200.00

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Ledger CLI Frontend wrapper script
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+VENV_PATH="$SCRIPT_DIR/venv"
+PYTHON_SCRIPT="$SCRIPT_DIR/ledger_cli.py"
+
+# Check if virtual environment exists
+if [ ! -d "$VENV_PATH" ]; then
+    echo "Virtual environment not found. Please run the setup first:"
+    echo "python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt"
+    exit 1
+fi
+
+# Activate virtual environment and run the CLI
+source "$VENV_PATH/bin/activate"
+python "$PYTHON_SCRIPT" "$@"
